@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   private begin(x: number, y: number, ctx: CanvasRenderingContext2D) {
     ctx.beginPath();
     ctx.moveTo(x, y);
+    console.log('aa')
     return {
       draw: (drawFunction: (x: number, y: number, ctx: CanvasRenderingContext2D) => void) => {
         return drawFunction(x, y, ctx);
