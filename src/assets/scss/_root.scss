@@ -1,0 +1,87 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100vh;
+  height: 100vw;
+}
+
+em {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// hover 標籤
+.hover-box {
+  position: relative;
+  &::after {
+    content: attr(data-hover);
+    display: flex;
+    position: absolute;
+    z-index: 9999;
+    top: -19px;
+    left: -36px;
+    white-space: nowrap;
+    padding: 4px 8px;
+    background-color: $light-black;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: 0.3s 0.3s;
+  }
+  &:hover::after {
+    opacity: 1;
+    z-index: 9999;
+    top: -25px;
+  }
+}
+
+// custom tooltip(hover show)
+.tooltip {
+  &__target {
+    position: relative;
+    &:hover {
+      opacity: 1;
+    }
+    &:hover .tooltip__overlay {
+      visibility: visible;
+      opacity: 1;
+      top: 28px;
+    }
+  }
+  &__overlay {
+    position: absolute;
+    z-index: map-get($layout-level, 'tooltip' );
+    top: 20px;
+    left: -14px;
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    visibility: hidden;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $white;
+    font-size: 0.75rem;
+    border-radius: 8px;
+    background-color: $light-black;
+    opacity: 0;
+    transition: 0.2s;
+    a {
+      color: $green;
+      &:hover {
+        color: $green;
+        opacity: 0.8;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: map-get($layout-level, 'tooltip' );
+      top: -5px;
+      left: 16px;
+      border-bottom: 8px solid $light-black;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+    }
+  }
+}

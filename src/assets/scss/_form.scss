@@ -1,0 +1,63 @@
+.btn {
+  &-flat {
+    height: 3rem;
+    // min-width: 160px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: $white;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    em {
+      color: $white;
+    }
+  }
+
+  // &-little {
+  //   &-confirm
+  // }
+
+  &-cancel {
+    color: $light-gray-1;
+    background-color: $white;
+    border: 1px solid $light-gray-1;
+    &:hover {
+      // background-color: $light-gray-3;
+      border: 1px solid $light-gray-2;
+    }
+  }
+
+  &-main {
+    color: $white;
+    background-color: $green;
+  }
+}
+
+.input {
+  display: flex;
+  align-items: center;
+  color: $deep-gray;
+  height: 3rem;
+  border-radius: var(--form-radius);
+  border: 1px solid $light-gray-1;
+  background-color: $white;
+}
+
+button {
+  p {
+    color: inherit;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}

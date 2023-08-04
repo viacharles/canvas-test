@@ -1,0 +1,57 @@
+{
+  "tenantId": "",
+  "businessImpatQuartile": [
+    {
+      "value": 0,
+      "color": "#44B787"
+    },
+    {
+      "value": 57,
+      "color": "#EFAD49"
+    },
+    {
+      "value": 65,
+      "color": "#FE8E3D"
+    },
+    {
+      "value": 67,
+      "color": "#EF6149"
+    }
+  ],
+  "technicalCostQuartile": [
+    {
+      "value": 0,
+      "color": "#44B787"
+    },
+    {
+      "value": 60,
+      "color": "#EFAD49"
+    },
+    {
+      "value": 66,
+      "color": "#FE8E3D"
+    },
+    {
+      "value": 74,
+      "color": "#EF6149"
+    }
+  ],
+  "riskLevelQuartile": [
+    {
+      "value": 0,
+      "color": "#44B787"
+    },
+    {
+      "value": 65,
+      "color": "#EFAD49"
+    },
+    {
+      "value": 77,
+      "color": "#FE8E3D"
+    },
+    {
+      "value": 80,
+      "color": "#EF6149"
+    }
+  ]
+}

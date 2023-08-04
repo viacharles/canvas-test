@@ -1,0 +1,36 @@
+@media print {
+  ::-webkit-scrollbar {
+    width: 0 !important;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+      width: 25rem !important
+   }
+   a {
+    text-decoration: none !important
+   }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after:avoid;
+    page-break-inside:avoid
+  }
+  img{
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  table, blockquote{
+    page-break-inside: avoid;
+  }
+  ul, ol, dl {
+    page-break-before:avoid;
+  }
+
+  img {
+    max-width: 100%;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 1cm;
+  }
+}

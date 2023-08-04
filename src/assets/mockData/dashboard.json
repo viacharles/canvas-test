@@ -1,0 +1,428 @@
+{
+  "5bef1f945abb43b1ba5c5d07d13a4ab5": {
+    "userId": "d937169707b8ce622d5d3a131012a3f035ff6b3a29ddd8ecc44a56094b0c81b9",
+    "dashBoardId": null,
+    "chartTemplates": {
+      "d9df3641d60a4c14a97d592056235a74": {
+        "questionId": null,
+        "sortOrder": "4",
+        "chartCategory": "bar",
+        "chartName": "系統屬於哪個業務類型？",
+        "chartType": "customization",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          {
+            "label": "行銷/通路",
+            "value": 1
+          },
+          {
+            "label": "應用/服務",
+            "value": 2
+          },
+          {
+            "label": "核心/產品",
+            "value": 3
+          },
+          {
+            "label": "分析/數據",
+            "value": 4
+          },
+          {
+            "label": "其他",
+            "value": 5
+          }
+        ],
+        "values": [
+          7,
+          6,
+          6,
+          4,
+          5
+        ]
+      },
+      "4d09550c395842b394756dd11ea88703": {
+        "questionId": null,
+        "sortOrder": "2",
+        "chartCategory": "bar",
+        "chartName": "Wave 遷移計劃分佈",
+        "chartType": "default",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          "Wave1",
+          "Wave2",
+          "Wave3",
+          "Wave4"
+        ],
+        "values": [
+          2,
+          1,
+          11,
+          2
+        ]
+      },
+      "144ad431a7924c08b3da6c547d32fa6a": {
+        "questionId": null,
+        "sortOrder": "5",
+        "chartCategory": "pie",
+        "chartName": "系統現行的應用系統架構為何？",
+        "chartType": "customization",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          {
+            "label": "Microservices 微服務",
+            "value": 1
+          },
+          {
+            "label": "N-Tier(SPA)",
+            "value": 2
+          },
+          {
+            "label": "N-Tier(MVC)",
+            "value": 3
+          },
+          {
+            "label": "eBAF",
+            "value": 4
+          },
+          {
+            "label": "N-Tier(WebForm)",
+            "value": 5
+          },
+          {
+            "label": "Monolith 單體式",
+            "value": 6
+          },
+          {
+            "label": "Software 套裝軟體",
+            "value": 7
+          },
+          {
+            "label": "Big Data & AI/ML",
+            "value": 8
+          },
+          {
+            "label": "Hadoop",
+            "value": 11
+          },
+          {
+            "label": "Data Warehouse",
+            "value": 9
+          },
+          {
+            "label": "ETL",
+            "value": 10
+          }
+        ],
+        "values": [
+          7,
+          5,
+          4,
+          2,
+          2,
+          1,
+          4,
+          1,
+          1,
+          1,
+          2
+        ]
+      },
+      "43ebd615e06f43c78ca256cfbca3f0b1": {
+        "questionId": null,
+        "sortOrder": "3",
+        "chartCategory": "pie",
+        "chartName": "系統權責單位",
+        "chartType": "customization",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          "測試部",
+          "AndrewTest062902",
+          "dsds",
+          "AndrewTest062901",
+          "ㄎddd",
+          "iii",
+          "sssdd",
+          "資料工程部",
+          "測試部1",
+          "dddd",
+          "數位開發部"
+        ],
+        "values": [
+          6,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cd56de62488a43b6ae817c863ad96b49": {
+        "questionId": null,
+        "sortOrder": "6",
+        "chartCategory": "bar",
+        "chartName": "系統重大性等級為何？",
+        "chartType": "customization",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          {
+            "label": "S1 正式環境系統─與公司業務直接相關",
+            "value": 1
+          },
+          {
+            "label": "S2 正式環境系統─與公司營運作業相關",
+            "value": 2
+          },
+          {
+            "label": "S3 正式環境系統─與資訊管理作業相關",
+            "value": 3
+          },
+          {
+            "label": "S4 平行測試環境系統",
+            "value": 4
+          }
+        ],
+        "values": [
+          10,
+          1,
+          1,
+          4
+        ]
+      },
+      "a116c20b7e694d46b6f90795261d074c": {
+        "questionId": "713bb8fa84a9491897af3ab46d5a9544",
+        "sortOrder": "7",
+        "chartCategory": "bar",
+        "chartName": "選用哪種資料庫(DB)？",
+        "chartType": "customization",
+        "chartSpacing": null,
+        "chartUnit": null,
+        "options": [
+          {
+            "label": "無使用DB",
+            "value": 1
+          },
+          {
+            "label": "PostgreSQL",
+            "value": 2
+          },
+          {
+            "label": "MS SQL",
+            "value": 3
+          },
+          {
+            "label": "MySQL",
+            "value": 4
+          },
+          {
+            "label": "Crystal DB",
+            "value": 5
+          },
+          {
+            "label": "Mongo DB",
+            "value": 6
+          },
+          {
+            "label": "DB2",
+            "value": 7
+          },
+          {
+            "label": "Oracle",
+            "value": 8
+          }
+        ],
+        "values": [
+          5,
+          4,
+          3,
+          2,
+          2,
+          1,
+          4,
+          2
+        ]
+      },
+      "49b5f096f76b494aad54935171793d66": {
+        "questionId": null,
+        "sortOrder": "0",
+        "chartCategory": "bubble",
+        "chartName": "系統遷移計劃分佈",
+        "chartType": "default",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          "technicalCost",
+          "riskLevel",
+          "waveLevel",
+          "system6r",
+          "businessImpact",
+          "projectName"
+        ],
+        "values": [
+          [
+            65,
+            92,
+            "Wave3",
+            "Retain",
+            60,
+            "char0629-3"
+          ],
+          [
+            100,
+            100,
+            "Wave3",
+            "Refactor",
+            100,
+            "滿分測試"
+          ],
+          [
+            100,
+            93,
+            "Wave3",
+            "Replace",
+            100,
+            "sdsd"
+          ],
+          [
+            41,
+            58,
+            "Wave1",
+            "Replatform",
+            100,
+            "測試003_wave最大值0.041"
+          ],
+          [
+            71,
+            92,
+            "Wave3",
+            "Refactor",
+            90,
+            "AndrewTest062902"
+          ],
+          [
+            50,
+            100,
+            "Wave2",
+            "Rewrite",
+            100,
+            "測試002wave0.02"
+          ],
+          [
+            100,
+            100,
+            "Wave3",
+            "Rewrite",
+            100,
+            "dddd"
+          ],
+          [
+            59,
+            61,
+            "Wave3",
+            "Rewrite",
+            70,
+            "測試006"
+          ],
+          [
+            55,
+            92,
+            "Wave3",
+            "Refactor",
+            80,
+            "AndrewTest062901"
+          ],
+          [
+            64,
+            90,
+            "Wave4",
+            "Retain",
+            45,
+            "char0629"
+          ],
+          [
+            66,
+            74,
+            "Wave3",
+            "Refactor",
+            66,
+            "報表中台系統"
+          ],
+          [
+            41,
+            58,
+            "Wave1",
+            "Retain",
+            74,
+            "測試004_wave0.0303"
+          ],
+          [
+            99,
+            100,
+            "Wave4",
+            "Retain",
+            45,
+            "測試005"
+          ],
+          [
+            99,
+            100,
+            "Wave3",
+            "Replace",
+            100,
+            "測試001_wave0.01"
+          ],
+          [
+            54,
+            61,
+            "Wave3",
+            "Retain",
+            50,
+            "char0629-2"
+          ],
+          [
+            80,
+            88,
+            "Wave3",
+            "Refactor",
+            84,
+            "國泰證券app"
+          ]
+        ]
+      },
+      "d7cce6c0a35b4508bb8c4a24c958e72f": {
+        "questionId": null,
+        "sortOrder": "1",
+        "chartCategory": "bar",
+        "chartName": "6R 遷移策略分佈",
+        "chartType": "default",
+        "chartSpacing": "0",
+        "chartUnit": "",
+        "options": [
+          "TBD",
+          "Retain",
+          "Replatform",
+          "Refactor",
+          "Rewrite",
+          "Replace"
+        ],
+        "values": [
+          0,
+          5,
+          1,
+          5,
+          3,
+          2
+        ]
+      }
+    }
+  }
+}

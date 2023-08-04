@@ -1,0 +1,142 @@
+<div #tScrollContainer class="scroll-container h-100 p-relative">
+  <div #tTrack class="scroll-track">
+    <div #tThumb class="scroll-thumb" (mousedown)="this.startScroll($event)" [style.transform]="this.thumbTransform">
+    </div>
+  </div>
+  <div #tContainer class="table-container h-100" [style.max-height]="this.config?.maxHeight"
+    (wheel)="this.scroll($event)">
+    <table #tTable>
+      <thead>
+        <tr>
+          <th class="row-check" *ngIf="this.config?.hasRowSelection">
+            <input #tSelectAll type="checkbox" id="select-all"
+              (change)="this.selectAllRows($event, tTable, this.rowsBeforeChunk)">
+            <label for="select-all"></label>
+          </th>
+          <ng-container *ngFor="let column of this.headColumns;let headerIndex = index">
+            <th [class.title]="headerIndex === 0"
+              [class.showFrontShadow]="tThumb.getBoundingClientRect().left >= (tTrack.getBoundingClientRect().left + 1)"
+              [style.backgroundColor]="this.config?.themeColor">
+              <div class="th-layout">
+                <h6>{{column.label}}</h6>
+                <app-icon-dropdown>
+                  <em id="button">
+                    <ng-template [ngTemplateOutlet]=" this.showSortIcon(column) ? tSortIcon : tFilterIcon"
+                      [ngTemplateOutletContext]="this.showSortIcon(column) ? {sortCode: this.sortConfig?.sortCode} : {column: column}"></ng-template>
+                  </em>
+                  <div id="content">
+                    <div class="sort">
+                      <h5>{{this.text.sort}}</h5>
+                      <ul>
+                        <li
+                          *ngFor="let option of [{name:'A -> Z', code: 'asc'}, {name: 'Z -> A', code: 'desc'}];let index = index"
+                          (click)="this.sort(column.code, option.code)">
+                          <input #tSortButtons type="radio" [id]="'sort' + column.code + index" name="sort">
+                          <label [for]="'sort' + column.code + index">{{option.name}}</label>
+                        </li>
+                      </ul>
+                    </div>
+                    <div #tFilter class="filter" *ngIf="column.hasFilter">
+                      <h5>{{this.text.filter}}</h5>
+                      <div>
+                        <p (click)="this.checkAll(true, column, tFilter)">{{this.text.all}}</p>
+                        <p (click)="this.checkAll(false, column, tFilter)">{{this.text.clear}}</p>
+                      </div>
+                      <ul>
+                        <li *ngFor="let option of column.filterOptions;let optionIndex = index">
+                          <input #tFilterCheckboxes type="checkbox" [id]="'filter' + column.code + optionIndex"
+                            [name]="'filter'+column.code+optionIndex" [checked]="true"
+                            (change)="this.collectFilterOption($event, option, column.code, this.filterCollection)">
+                          <label [for]="'filter'+column.code+optionIndex">{{option}}</label>
+                        </li>
+                      </ul>
+                      <div>
+                        <!-- <button (click)=" this.tableResetSubject.next({ data: this.data, config: this.config!, searchText: this.searchText })">確認</button> -->
+                      </div>
+                    </div>
+                  </div>
+                </app-icon-dropdown>
+              </div>
+            </th>
+          </ng-container>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let row of this.getDisplayRows;let rowIndex = index">
+          <tr>
+            <td #tBodyCheckBox class="row-check" *ngIf="this.config?.hasRowSelection">
+              <input type="checkbox" [id]="'select-row'+rowIndex" [checked]="this.isAllRowsSelect"
+                (change)="this.selectRow($event, row.key)">
+              <label [for]="'select-row'+rowIndex"></label>
+            </td>
+            <ng-container *ngFor="let column of row.columns;let columnIndex = index">
+              <td [class.title]="columnIndex === 0"
+                [class.showFrontShadow]="tThumb.getBoundingClientRect().left >= (tTrack.getBoundingClientRect().left + 1)"
+                [style.max-width]="this.column.fixedWidth" [style.min-width]="this.column.fixedWidth"
+                class="{{this.column.customClass}}" [style]="this.column.style" (click)="this.rowClick.emit(row.key)">
+                <div class="main-text">
+                  <div *ngIf="column.fontMulti && column.fontMulti(column.value).length > 0;else tSingleText">
+                    <span *ngFor="let font of column.fontMulti(column.value)"
+                      [style.color]="this.getColor(font.value, font?.color)" [style.fontWeight]="font?.weight"
+                      [style.fontSize]="font?.size">
+                      {{font.value}}
+                    </span>
+                    <span class="hover-tooltip"
+                      *ngIf="column.tooltip?.showExpression(column.value ?? '', row, rowIndex, this.data)"
+                      [style.color]="column.font?.color">
+                      <p>{{column.tooltip?.textExpression(column.value ?? '', row, rowIndex, this.data)}}</p>
+                    </span>
+                  </div>
+                  <ng-template #tSingleText>
+                    <p class="text" [style.color]="this.getColor(column.value ?? '', column?.font?.color)"
+                      [style.fontWeight]="column?.font?.weight" [style.fontSize]="column?.font?.size">
+                      {{column.value}}
+                      <span class="hover-tooltip"
+                        *ngIf="column.tooltip?.showExpression(column.value ?? '', row, rowIndex, this.data)"
+                        [style.backgroundColor]="this.getColor(column.value ?? '', column.font?.color)">
+                        <p>{{column.tooltip?.textExpression(column.value ?? '', row, rowIndex, this.data)}}</p>
+                      </span>
+                    </p>
+                  </ng-template>
+                  <em *ngIf="column.iconTooltip?.showExpression(column.value ?? '', row, rowIndex, this.data)"
+                    class="{{column.iconTooltip?.type}}">
+                    !
+                    <span>{{column.iconTooltip?.text}}</span>
+                  </em>
+                </div>
+                <p class="des" *ngIf="column.desCode" [style.color]="column?.font?.color">{{column.valueDes}}</p>
+              </td>
+            </ng-container>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <span [class.end-shadow]="tThumb.getBoundingClientRect().right <= tTrack.getBoundingClientRect().right - 20"></span>
+  <div *ngIf="this.getDisplayRows.length === 0" class="no-projects-message p-absolute">
+    <em></em>
+    <span>{{this.text.noRowsWarn}}</span>
+  </div>
+</div>
+
+
+<div class="count-label">
+  <p>{{this.config?.countLabel || this.text.showCount}}: {{this.rowsBeforeChunk.length}}</p>
+</div>
+
+
+<ng-template #tFilterIcon let-column="column">
+  <div class="filter-icon" [class.hasFilter]="this.hasOptionsModified(column)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</ng-template>
+
+<ng-template #tSortIcon let-sortCode="sortCode">
+  <em id="sort-icon" [class.desc]="sortCode === 'desc'">
+    <span>A</span>
+    <span>Z</span>
+    <span class="arraw"></span>
+  </em>
+</ng-template>

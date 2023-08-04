@@ -1,0 +1,11 @@
+@import "variables";
+:host {
+  display: flex;
+  width: 100vh;
+  height: 100vw;
+}
+
+.app-sidebar {
+  width: fit-content;
+  z-index: map-get($layout-level, 'sidebar' );
+}

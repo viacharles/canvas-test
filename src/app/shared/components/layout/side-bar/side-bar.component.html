@@ -1,0 +1,52 @@
+<div class="nav-container {{this.isMenuExpand ? 'isExpand' : 'isCollapse'}}" style="user-select: none;">
+  <div class="expand-trigger-area h-100 w-10">
+    <div class="expand-button d-flex align-items-center justify-content-center position-absolute pe-pointer rounded-circle"
+    (click)="this.isMenuExpand = !this.isMenuExpand">
+      <em class="fa fa-chevron-{{this.isMenuExpand ? 'left' : 'right'}}"></em>
+    </div>
+  </div>
+  <div class="menu" *ngIf="this.isMenuExpand">
+    <div class="nav-logo py-3"><a tabindex="-1" href="/"><img class="h-8" [src]="" alt=""></a></div>
+    <div class="avatar d-flex flex-row pl-4 pt-4 mb-2" *ngIf="this.tenantName && this.userName">
+      <img src="">
+      <div class="d-flex flex-column justify-content-center ml-2">
+        <p class="fs-md fw-7 ">{{this.tenantName}}</p>
+        <p class="fs-smx">{{this.userName}}</p>
+      </div>
+    </div>
+    <!-- nav menu -->
+    <ul class="pt-1">
+      <ng-container *ngFor="let section of this.mainMenu | keyvalue : asIsOrder;let index = index">
+        <li *ngIf="this.showParentItem(section.value)">
+          <div>
+            <input #input class="d-none" type="radio" [formControl]="this.menuForm"
+            [value]="section.value.path ? '/'+section.value.path : section.key" [id]="index">
+            <label class="d-flex flex-row align-items-center justify-content-between w-100 h-12 pl-7 fw-6 pe-pointer"[for]="index"
+              [class.hasPath]="section.value.path !== undefined" (click)="this.toggleMenu(section.key)">
+              <div class="flex-row-start">
+                <em *ngIf="section.value.icon" class="{{section.value.icon}}"></em>
+                <p class="text-break fs-smx">{{section.value.title | translate}}</p>
+              </div>
+              <em *ngIf="section.value.subMenu"
+                class="arrow" [class.isExpand]="section.value.isExpand"></em>
+            </label>
+          </div>
+          <ul>
+            <ng-container *ngFor="let item of section.value.subMenu | keyvalue: asIsOrder ;let subIndex = index">
+              <li
+              class="menu-item {{section.value.isExpand ? 'expand' : 'collapse'}}">
+              <input class="d-none" type="radio" [formControl]="this.menuForm" [value]="'/'+item.value.path"
+                [id]="index+'-'+subIndex">
+              <label class="flex-row-start w-100 h-12 pl-{{this.isMenuExpand ? '13' : '7'}} fw-6 pe-pointer" [for]="index+'-'+subIndex"
+                [class.hasPath]="item.value.path !== undefined" (click)="this.toggleMenu(section.key, item.key, item.value.functionMark)">
+                <em *ngIf="item.value.icon" class="{{item.value.icon}}"></em>
+                <p class="text-break fs-smx">{{item.value.title | translate}}</p>
+              </label>
+            </li>
+            </ng-container>
+          </ul>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+</div>

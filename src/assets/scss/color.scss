@@ -1,0 +1,47 @@
+$color-primary: var(--primary-color);
+$color-secondary: var(--secondary-color);
+$color-dialog: var(--dialog-color);
+
+$background: $color-secondary;
+$dark-background: #f8f8f8;
+$color-text: RGBA(0, 0, 0, .74);
+$color-select: var(--primary-select-color);
+$button-gray: #eeeff2;
+
+$white: #fff;
+$light-white: #FAFAFA;
+$black: #000;
+$light-black: #333;
+$deep-gray: #635D5D;
+$green: #44B787; // cathay-green
+$orange: #FF7F23;
+$yellow: #EFAD49;
+$danger: #EF6149;
+$success: #78d5a7;
+$dark-gray: #4F4A4A;
+$bootstrap-deep-gray: #495057;
+$light-gray-0: #E1E1E1;
+$light-gray-0-outline: #DCDCDC;
+$light-gray-1: #AEAEAE;
+$light-gray-2: #D8D8D8;
+$light-gray-3: #F5F5F5;
+$light-gray-4: #F0F0F0;
+$light-gray-5: #EEEFF2;
+
+$theme-color: (
+  green: $green,
+  warn: $yellow,
+  focus: $orange,
+  concentrate: $danger,
+  text: $deep-gray,
+  dark-gray: $dark-gray,
+  light-gray-0: $light-gray-0,
+  light-gray-0-outline: $light-gray-0-outline,
+  light-gray-1: $light-gray-1,
+  light-gray-2: $light-gray-2,
+  light-gray-3: $light-gray-3,
+  light-gray-4: $light-gray-4,
+  light-gray-5: $light-gray-5,
+  black: $black,
+  none: 'none'
+)

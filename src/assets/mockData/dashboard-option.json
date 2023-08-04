@@ -1,0 +1,380 @@
+{
+  "groups": [
+    {
+      "groupName": "重大性",
+      "groupId": "1d240faa8b53473e9feb7b04b4d7dad4",
+      "questions": {
+        "8b6cbcb02da048a3ac2b151e26ebaaaf": {
+          "questionOrder": 1,
+          "shortTitleEN": "Sensitive Data",
+          "shortTitleCN": "是否存在敏感資料",
+          "longTitleEN": "Sensitive Data",
+          "longTitleCN": "系統內是否存在敏感資料？"
+        },
+        "9bf81ccc5e5046eaa511b0700ffd3be1": {
+          "questionOrder": 3,
+          "shortTitleEN": "Criticality Description",
+          "shortTitleCN": "系統若停機時的損失說明",
+          "longTitleEN": "Criticality Description",
+          "longTitleCN": "系統若停機時的損失說明"
+        },
+        "7bef5ad597964ef68e2268a1a2af4384": {
+          "questionOrder": 2,
+          "shortTitleEN": "Criticality",
+          "shortTitleCN": "重大性",
+          "longTitleEN": "Criticality",
+          "longTitleCN": "系統重大性等級為何？"
+        },
+        "ffb2ac66708541d989bce3af9cda513b": {
+          "questionOrder": 0,
+          "shortTitleEN": "Core System Linked",
+          "shortTitleCN": "是否有存取核心",
+          "longTitleEN": "Core System Linked",
+          "longTitleCN": "系統是否有存取核心系統？"
+        }
+      }
+    },
+    {
+      "groupName": "SLA",
+      "groupId": "e47f83a5dd7742f88b27eb6369f49c22",
+      "questions": {
+        "078aae26c6854cf9bb2e33dd769a4ae3": {
+          "questionOrder": 1,
+          "shortTitleEN": "Avaliability / RTO(hr)",
+          "shortTitleCN": "容許服務中斷時間(RTO)",
+          "longTitleEN": "Avaliability / RTO(H)",
+          "longTitleCN": "若系統出問題，目標幾小時內需要復原(RTO)？"
+        },
+        "85c0b79883264ae4b2d3a148b62cdfaa": {
+          "questionOrder": 0,
+          "shortTitleEN": "SLA",
+          "shortTitleCN": "服務水準協議(SLA)",
+          "longTitleEN": "SLA",
+          "longTitleCN": "系統採用哪種服務水準協議 (SLA)？"
+        }
+      }
+    },
+    {
+      "groupName": "業務規劃",
+      "groupId": "d05a830cc606489c976b6ab2d2b81c43",
+      "questions": {
+        "02868c0905c94ce0b0c7caab53b67e5f": {
+          "questionOrder": 0,
+          "shortTitleEN": "Domain Map",
+          "shortTitleCN": "業務類型",
+          "longTitleEN": "Domain Map",
+          "longTitleCN": "系統屬於哪個業務類型？"
+        },
+        "aa93468954324ed5bf3560259cf21be8": {
+          "questionOrder": 2,
+          "shortTitleEN": "Strategic Alignment",
+          "shortTitleCN": "戰情規劃",
+          "longTitleEN": "Strategic Alignment",
+          "longTitleCN": "是否與數位轉型專案、戰情規劃有相關？"
+        },
+        "0ecd8dcf8ec64a6fb4f9bd896889ac67": {
+          "questionOrder": 4,
+          "shortTitleEN": "Expansion Plan",
+          "shortTitleCN": "擴充計畫",
+          "longTitleEN": "Expansion Plan",
+          "longTitleCN": "3 年內有無任何擴充計畫?"
+        },
+        "3e7a70f61df1461a84b33872865e08db": {
+          "questionOrder": 5,
+          "shortTitleEN": "Expansion Plan Description",
+          "shortTitleCN": "系統擴充目標說明",
+          "longTitleEN": "Expansion Plan Description",
+          "longTitleCN": "系統擴充目標說明"
+        },
+        "ee82320ce0f94698aa108e68b8b8b92e": {
+          "questionOrder": 3,
+          "shortTitleEN": "Remaining Service Life",
+          "shortTitleCN": "下線時間",
+          "longTitleEN": "Remaining Service Life",
+          "longTitleCN": "是否有預期下線的時間？"
+        },
+        "83128327f2e44db78d27d2d498003bd8": {
+          "questionOrder": 1,
+          "shortTitleEN": "User Facing",
+          "shortTitleCN": "用戶面向",
+          "longTitleEN": "User Facing",
+          "longTitleCN": "系統的使用者是誰？"
+        }
+      }
+    },
+    {
+      "groupName": "上雲價值",
+      "groupId": "706691a503fb4b4e8071828eb0a6385a",
+      "questions": {
+        "60ce6cdaa7c84f94ac77666859a50efc": {
+          "questionOrder": 2,
+          "shortTitleEN": "Burst Traffic",
+          "shortTitleCN": "突發流量",
+          "longTitleEN": "Burst Traffic",
+          "longTitleCN": "系統是否會有突發流量？"
+        },
+        "a1e1ef32ff60495094069d10bfa3fd85": {
+          "questionOrder": 4,
+          "shortTitleEN": "HADR Classification",
+          "shortTitleCN": "高可用/備援機制",
+          "longTitleEN": "HADR Classification",
+          "longTitleCN": "系統有高可用/備援(HADR)的需求嗎？"
+        },
+        "3a8093b991f54f44a182d8f17ab7cb49": {
+          "questionOrder": 1,
+          "shortTitleEN": "User Frequency",
+          "shortTitleCN": "用戶使用頻率 (每月)",
+          "longTitleEN": "User Frequency",
+          "longTitleCN": "系統用戶使用頻率(每月)為何？"
+        },
+        "bec7d95094e742ac811382afe7b42555": {
+          "questionOrder": 0,
+          "shortTitleEN": "Active User",
+          "shortTitleCN": "用戶數量",
+          "longTitleEN": "Active User",
+          "longTitleCN": "系統現行的用戶數量？"
+        },
+        "5b35458547bb40adab137712b2cca7c7": {
+          "questionOrder": 3,
+          "shortTitleEN": "Application Change Rate",
+          "shortTitleCN": "系統更新頻率(每月)",
+          "longTitleEN": "Application Change Rate",
+          "longTitleCN": "系統更新頻率(每月)為何？"
+        }
+      }
+    },
+    {
+      "groupName": "基本資訊",
+      "groupId": "86dd49e88bac409ca6fc8909adacb162",
+      "questions": {
+        "4558bec4f8af42ee8570fbb0a76a2d0b": {
+          "questionOrder": 2,
+          "shortTitleEN": "Owner",
+          "shortTitleCN": "權責人員",
+          "longTitleEN": "Owner",
+          "longTitleCN": "系統權責人員"
+        },
+        "e85648553d5544ab93838d1a299f450d": {
+          "questionOrder": 1,
+          "shortTitleEN": "AP Name",
+          "shortTitleCN": "系統名稱",
+          "longTitleEN": "AP Name",
+          "longTitleCN": "系統名稱"
+        },
+        "84274128836447329749adbd534be191": {
+          "questionOrder": 4,
+          "shortTitleEN": "AP Vendor",
+          "shortTitleCN": "開發廠商",
+          "longTitleEN": "AP Vendor",
+          "longTitleCN": "系統開發廠商"
+        },
+        "6f3f871ec06041c68be3dbd3425b9945": {
+          "questionOrder": 5,
+          "shortTitleEN": "AP Description",
+          "shortTitleCN": "系統說明(如用途與系統功能簡述）",
+          "longTitleEN": "AP Description",
+          "longTitleCN": "系統說明(如用途與系統功能簡述）"
+        },
+        "2d04629f7bf84981a09364610461996b": {
+          "questionOrder": 3,
+          "shortTitleEN": "AP Owner",
+          "shortTitleCN": "權責單位",
+          "longTitleEN": "AP Owner",
+          "longTitleCN": "系統權責單位"
+        },
+        "017a145d37d04340a94ccb93ba2ffdb8": {
+          "questionOrder": 0,
+          "shortTitleEN": "AP ID",
+          "shortTitleCN": "系統編號",
+          "longTitleEN": "AP ID",
+          "longTitleCN": "系統編號"
+        }
+      }
+    },
+    {
+      "groupName": "開發體驗",
+      "groupId": "22c721a571684db687b9213b1a9fa480",
+      "questions": {
+        "c048dbeb5e234736bcb547f816157b91": {
+          "questionOrder": 0,
+          "shortTitleEN": "Developer Painpoints",
+          "shortTitleCN": "日常開發/維運痛點",
+          "longTitleEN": "Developer Painpoints",
+          "longTitleCN": "日常開發或維運上有遇到哪些痛點？"
+        },
+        "b5cd033c83804588b493127cd6bc1875": {
+          "questionOrder": 1,
+          "shortTitleEN": "Painpoint Description",
+          "shortTitleCN": "痛點說明",
+          "longTitleEN": "Painpoint Description",
+          "longTitleCN": "痛點說明"
+        }
+      }
+    },
+    {
+      "groupName": "技術架構",
+      "groupId": "0453e6494da748a08a971fd5deaf0d94",
+      "questions": {
+        "713bb8fa84a9491897af3ab46d5a9544": {
+          "questionOrder": 8,
+          "shortTitleEN": "Database",
+          "shortTitleCN": "資料庫類型",
+          "longTitleEN": "Database",
+          "longTitleCN": "選用哪種資料庫(DB)？"
+        },
+        "61dc3eb15dfe474abff6f7cab610f67a": {
+          "questionOrder": 2,
+          "shortTitleEN": "Virtualization",
+          "shortTitleCN": "虛擬化程度",
+          "longTitleEN": "Virtualization",
+          "longTitleCN": "系統目前的虛擬化程度為何？"
+        },
+        "c892fd7d8b5842fe90ac4ce2dc06e9f0": {
+          "questionOrder": 4,
+          "shortTitleEN": "Stateless / Stateful",
+          "shortTitleCN": "Stateless/Stateful",
+          "longTitleEN": "Stateless / Stateful",
+          "longTitleCN": "系統資料狀態為 Stateless 或 Stateful？"
+        },
+        "f6e1b5fa27294b38bd1ca33794000df0": {
+          "questionOrder": 6,
+          "shortTitleEN": "Programming Language",
+          "shortTitleCN": "開發程式語言",
+          "longTitleEN": "Programming Language",
+          "longTitleCN": "選用哪種開發程式語言？"
+        },
+        "e392076aefc5422f994187f321c7e3a8": {
+          "questionOrder": 7,
+          "shortTitleEN": "Operation System(OS)",
+          "shortTitleCN": "作業系統版本",
+          "longTitleEN": "Operation System(OS)",
+          "longTitleCN": "選用哪種作業系統(OS)？"
+        },
+        "b062c16dbba4479ca885f425e9002e7a": {
+          "questionOrder": 1,
+          "shortTitleEN": "Frontend & Backend Separation",
+          "shortTitleCN": "是否前後分離",
+          "longTitleEN": "Frontend & Backend Separation",
+          "longTitleCN": "是否有前後端分離？"
+        },
+        "a5d1fb90b444408cb8d95c14143d2813": {
+          "questionOrder": 0,
+          "shortTitleEN": "Application Architecture",
+          "shortTitleCN": "應用系統架構",
+          "longTitleEN": "Application Architecture",
+          "longTitleCN": "系統現行的應用系統架構為何？"
+        },
+        "d043935c1e3540a7ac2c65f70322e944": {
+          "questionOrder": 9,
+          "shortTitleEN": "Size of Data",
+          "shortTitleCN": "資料庫資料量大小 (GB)",
+          "longTitleEN": "Size of Data",
+          "longTitleCN": "資料庫既有容量是否 >200GB?"
+        },
+        "f139671a6a704d2fb4fe956dc80ecfc0": {
+          "questionOrder": 5,
+          "shortTitleEN": "Data Processing Type",
+          "shortTitleCN": "資料處理類型",
+          "longTitleEN": "Data Processing Type",
+          "longTitleCN": "資料處理類型為 OLTP 或 OLAP?"
+        },
+        "59eaa880313e48fda1054669ed2be869": {
+          "questionOrder": 3,
+          "shortTitleEN": "Containerization",
+          "shortTitleCN": "是否所有皆容器化",
+          "longTitleEN": "Containerization",
+          "longTitleCN": "是否所有服務皆容器化？"
+        }
+      }
+    },
+    {
+      "groupName": "系統要求",
+      "groupId": "e55ea232e3fa479cac0b3b8b85fb2b9f",
+      "questions": {
+        "7089120c9b2c475e9fa613b073718d4e": {
+          "questionOrder": 4,
+          "shortTitleEN": "Authentication/Authorization",
+          "shortTitleCN": "系統驗證/授權方式",
+          "longTitleEN": "Authentication/Authorization",
+          "longTitleCN": "系統驗證/授權方式為何？"
+        },
+        "4c9f3e3e05974d4d87d420a1338947f9": {
+          "questionOrder": 3,
+          "shortTitleEN": "High Security Requirement",
+          "shortTitleCN": "高安全需求",
+          "longTitleEN": "High Security Requirement",
+          "longTitleCN": "是否有高安全需求？(如加密、驗證等)"
+        },
+        "923c91be4c9648d380677c373481f3c9": {
+          "questionOrder": 2,
+          "shortTitleEN": "BLOB File",
+          "shortTitleCN": "大量檔案存放需求",
+          "longTitleEN": "BLOB File",
+          "longTitleCN": "是否有大量檔案存放的需求(如文件、圖片、影片、音樂，總共大於1GB)？"
+        },
+        "384096691ebb473aa803da919f18a9cd": {
+          "questionOrder": 5,
+          "shortTitleEN": "Hardware Security Module(HSM)",
+          "shortTitleCN": "是否使用HSM",
+          "longTitleEN": "Hardware Security Module(HSM)",
+          "longTitleCN": "是否使用硬體安全模組(HSM)?"
+        },
+        "511941a712084eba9c1bcceea26603d2": {
+          "questionOrder": 1,
+          "shortTitleEN": "Load Balancer",
+          "shortTitleCN": "是否使用負載均衡器",
+          "longTitleEN": "Load Balancer",
+          "longTitleCN": "是否使用負載均衡器(Load Balancer)？"
+        },
+        "23c0ba37405d4ebda7fa2bff656f3098": {
+          "questionOrder": 0,
+          "shortTitleEN": "High Performance Requirement",
+          "shortTitleCN": "高效能需求",
+          "longTitleEN": "High Performance Requirement",
+          "longTitleCN": "是否有高效能需求？(如多核CPU＋多記憶體)"
+        }
+      }
+    },
+    {
+      "groupName": "系統複雜度",
+      "groupId": "e389dfb18ff74f3182ad9035f42071d8",
+      "questions": {
+        "850e0075179749658a7863b8b2c7c5eb": {
+          "questionOrder": 0,
+          "shortTitleEN": "Shared Infrastructure Element",
+          "shortTitleCN": "是否共享基礎設施",
+          "longTitleEN": "Shared Infrastructure Element",
+          "longTitleCN": "是否與其他系統共享基礎設施？(如伺服器)"
+        },
+        "e5d639fdcaf84673bde9d6cadbc1320f": {
+          "questionOrder": 2,
+          "shortTitleEN": "Shared Database",
+          "shortTitleCN": "是否共享資料庫",
+          "longTitleEN": "Shared Database",
+          "longTitleCN": "是否與其他系統共享資料庫(Shared DB)？"
+        },
+        "fcc9bcbff0a442948011c78be48f6b28": {
+          "questionOrder": 3,
+          "shortTitleEN": "Shared Data Source(s)",
+          "shortTitleCN": "是否共享資料源",
+          "longTitleEN": "Shared Data Source(s)",
+          "longTitleCN": "是否與其他系統共享資料源(Shared Data Source)？"
+        },
+        "4a5a80e9faf046aab8c5828762a61b29": {
+          "questionOrder": 1,
+          "shortTitleEN": "Network File System(NFS)",
+          "shortTitleCN": "是否共享儲存(NFS)",
+          "longTitleEN": "Network File System(NFS)",
+          "longTitleCN": "是否需要使用共享儲存裝置？(如NFS)"
+        },
+        "332309dbef354cdd9c7009498aa17fa2": {
+          "questionOrder": 4,
+          "shortTitleEN": "External Coupling",
+          "shortTitleCN": "串接外部系統數量(API)",
+          "longTitleEN": "External Coupling",
+          "longTitleCN": "與幾個內外部系統有相互串接？(如API)"
+        }
+      }
+    }
+  ]
+}

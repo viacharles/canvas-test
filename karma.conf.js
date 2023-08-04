@@ -32,7 +32,17 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'coverage-istanbul'],
+    coverageIstanbulReporter: {
+      report: ['html', 'lcovonly', 'text-summary'],
+      dir: './coverage',
+      fixWebpackSourcePaths: true,
+      "report-config": {
+        html: {
+          subdir: 'html'
+        }
+      }
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

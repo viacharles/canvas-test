@@ -1,0 +1,62 @@
+
+$breakpoint-medium:768px;
+$breakpoint-large: 1024px;
+$breakpoint-xlarge: 1280px;
+$breakpoint-xxlarge: 1600px;
+$breakpoint-xxxlarge: 1820px;
+//screen breakpoints for now
+
+@mixin screen-1() {
+  @media screen and (max-width: $breakpoint-medium ) {
+    @content;
+  }
+}
+@mixin screen-2() {
+  @media screen and (min-width:  $breakpoint-medium) and (max-width: ($breakpoint-large - 1px )) {
+    @content;
+  }
+}
+@mixin screen-3() {
+  @media screen and (min-width:  $breakpoint-large) and (max-width: ($breakpoint-xxlarge - 1px)) {
+    @content;
+  }
+}
+
+@mixin screen-4() {
+  @media screen and (min-width:  $breakpoint-xxlarge) {
+    @content;
+  }
+}
+
+@mixin screen-5() {
+  @media screen and (min-width:  $breakpoint-xxxlarge) {
+    @content;
+  }
+}
+
+
+// RWD mixin
+@mixin responsive($property, $medium, $large, $xlarge, $xxlarge, $important: "") {
+
+  @include screen-1(){
+    #{$property}: $medium#{$important};
+  }
+  @include screen-2(){
+    #{$property}: $large#{$important};
+  }
+  @include screen-3(){
+    #{$property}: $xlarge#{$important};
+  }
+  @include screen-4(){
+    #{$property}: $xxlarge#{$important};
+  }
+
+}
+// for resolution 1920px or 1820 up
+@mixin responsive_large($property, $xxxlarge, $important: "") {
+  @include screen-5(){
+    #{$property}: $xxxlarge#{$important};
+  }
+
+}
+

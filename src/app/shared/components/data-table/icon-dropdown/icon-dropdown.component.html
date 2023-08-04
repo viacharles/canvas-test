@@ -1,0 +1,9 @@
+
+<span #tButton class="pe-pointer d-flex justify-content-center w-7 " (click)="this.toggle($event)">
+  <ng-content select="#button"></ng-content>
+  <div #tDropdown class="{{this.isOpen ? 'show' : 'hide'}}">
+    <span class="x" (click)="this.isOpen = false"></span>
+    <ng-content select="#content"></ng-content>
+  </div>
+</span>
+<div *ngIf="this.isOpen" class="backdrop"></div>
